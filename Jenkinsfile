@@ -12,11 +12,18 @@ pipeline {
                 sh './gradlew build'
             }
         }
-        
+
 		stage('Three') {
 			steps {
-				echo 'Finished'
+				echo 'Build done'
+			}
+		}	
+        
+        stage('archive') {
+			steps {
+				archiveArtifacts(artifacts: '**/*.jar', followSymlinks: false)
 			}
 		}		
+
 	}
 }

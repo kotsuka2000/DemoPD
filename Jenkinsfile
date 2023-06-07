@@ -16,22 +16,8 @@ pipeline {
 		stage('Build') {
             steps {
                 sh './gradlew build'
-            }
-        }
-        
-        stage('Test') {
-            steps {
-                sh './gradlew test'
-            }
-        }
-        
-        stage('Check') {
-            steps {
-                sh './gradlew check'
-            }
-        }      
 		
-		stage('Five') {
+		stage('Three') {
 			steps {
 				echo 'Finished'
 			}

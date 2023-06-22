@@ -3,7 +3,10 @@ pipeline {
 	stages {
 		stage('One') {
 			steps {
-				echo 'Hi, this is Kiyotaka from PagerDuty'
+				// Change file permisson
+                sh "chmod +x -R ./jenkins"
+                // Run shell script
+                sh "./jenkins/script/scripted_pipeline_ex_2.sh"
 			}
 		}       
  

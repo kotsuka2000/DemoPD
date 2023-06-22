@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 	stages {
-		stage('One') {
+		stage('Build') {
 			steps {
 				// Change file permisson
                 sh "chmod +x -R ./jenkins"
